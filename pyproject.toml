@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "project-name"
+version = "0.1.0"
+description = "FastAPI microservice for LLM"
+authors = ["Trojan-Dev-AFK <aloysius.mon.05@gmail.com>"]
+license = "MIT License"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+isort = "^6.0.1"
+types-passlib = "^1.7.7.20250401"
+ruff = "^0.11.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+select = ["D", "F401"]
+ignore = ["D212", "D104"]
+fix = true
+
+[tool.ruff.pydocstyle]
+convention = "google"
